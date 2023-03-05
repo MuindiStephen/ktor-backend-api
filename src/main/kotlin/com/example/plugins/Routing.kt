@@ -10,4 +10,9 @@ fun Application.configureRouting() {
             call.respondText("Hello World!")
         }
     }
+    routing {
+        get("/user") {
+            call.respondJson([])
+        }
+    }
 }
