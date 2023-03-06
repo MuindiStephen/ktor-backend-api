@@ -13,7 +13,7 @@ fun Application.configureRouting() {
 
     routing {
         get("/ktor") {
-            call.respondText("My name is Stephen Muindi and welcome to Ktor backend for android")
+            call.respond("Hey")
         }
     }
 }
