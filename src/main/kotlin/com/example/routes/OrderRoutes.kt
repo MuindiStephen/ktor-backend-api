@@ -9,6 +9,8 @@ fun Route.listOrdersRoute() {
     get("/order") {
         if (orderStorage.isNotEmpty()) {
             call.respond(orderStorage)
+        } else {
+            call.respondText("No available orders")
         }
     }
 }
