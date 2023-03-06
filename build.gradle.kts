@@ -22,11 +22,21 @@ repositories {
 }
 
 dependencies {
+
+    // Adds Ktor's core components
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
+
+    // Adds Netty Engines allowing us to use server functionality
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
+
+    // See logs in console
     implementation("ch.qos.logback:logback-classic:$logback_version")
+
+    // Testing
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+
+    // Handle JSON formats for user input (request) & for API output(response)
     implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 }
