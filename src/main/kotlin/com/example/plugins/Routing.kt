@@ -6,8 +6,14 @@ import io.ktor.server.application.*
 
 fun Application.configureRouting() {
     routing {
-        get("/root") {
+        get("/") {
             call.respondText("Hello World! Welcome to Ktor")
+        }
+    }
+
+    routing {
+        get("/ktor") {
+            call.respond("Hey")
         }
     }
 }

@@ -3,11 +3,12 @@ val kotlin_version: String by project
 val logback_version: String by project
 
 plugins {
+    application
     kotlin("jvm") version "1.8.10"
-    id("io.ktor.plugin") version "2.2.4"
+    //id("io.ktor.plugin") //version "2.2.4"
 }
 
-group = "com.example"
+group = "com.steve_md"
 version = "0.0.1"
 application {
     mainClass.set("com.example.ApplicationKt")
@@ -26,4 +27,6 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:$logback_version")
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 }
