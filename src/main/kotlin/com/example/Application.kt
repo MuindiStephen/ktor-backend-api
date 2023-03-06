@@ -10,7 +10,6 @@ fun main() {
         .start(wait = true)
 }
 
-
 /*
 * Entry point of application
 * */
