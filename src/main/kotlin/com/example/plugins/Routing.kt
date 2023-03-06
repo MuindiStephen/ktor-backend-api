@@ -1,19 +1,12 @@
 package com.example.plugins
 
+import com.example.routes.customerRouting
 import io.ktor.server.routing.*
 import io.ktor.server.response.*
 import io.ktor.server.application.*
 
 fun Application.configureRouting() {
     routing {
-        get("/") {
-            call.respondText("Hello World! Welcome to Ktor")
-        }
-    }
-
-    routing {
-        get("/ktor") {
-            call.respond("Hey")
-        }
+       customerRouting()  // To Register routes
     }
 }
